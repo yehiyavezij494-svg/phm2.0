@@ -1,0 +1,62 @@
+<script setup>
+import { RouterView } from 'vue-router'
+
+import DeviceNav
+  from '@/components/device/DeviceNav.vue'
+</script>
+
+<template>
+  <div class="device-page">
+    <main class="device-dashboard">
+
+      <DeviceNav />
+
+      <section class="device-router-area">
+        <RouterView />
+      </section>
+
+    </main>
+  </div>
+</template>
+
+<style scoped>
+.device-page {
+  width: 100%;
+
+  min-width: 1200px;
+
+  min-height:
+    calc(100vh - 64px);
+
+  padding: 10px 12px;
+
+  box-sizing: border-box;
+
+  color: #d9f5ff;
+
+  background:
+    linear-gradient(
+      rgba(4, 34, 62, 0.88),
+      rgba(1, 18, 34, 0.97)
+    );
+}
+
+.device-dashboard {
+  width: 100%;
+
+  min-height: 760px;
+
+  display: grid;
+
+  grid-template-rows:
+    44px
+    minmax(0, 1fr);
+
+  gap: 10px;
+}
+
+.device-router-area {
+  min-width: 0;
+  min-height: 0;
+}
+</style>
